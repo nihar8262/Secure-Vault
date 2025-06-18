@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+@keyframes spin-bg {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinning-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.spinning-bg::before {
+  content: "";
+  position: absolute;
+  /* top: 0; left: 0; right: 0; bottom: 0; */
+  inset: 20% 30% 30% 20%;
+  background: url('./assets/sphere.png') center center/cover no-repeat;
+  opacity: 0.5; /* adjust as needed */
+  z-index: 0;
+  animation: spin-bg 10s linear infinite;
+  width: 60%;
+  height: 60%;
+  pointer-events: none; /* allows clicks through the background */
+}
+
+.spinning-bg > * {
+  position: relative;
+  z-index: 1;
+}

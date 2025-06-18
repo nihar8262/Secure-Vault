@@ -11,7 +11,7 @@ const Navbar = () => {
       </div>
       <ul>
         <li className="flex gap-6 ">
-          <button className="flex items-center md:gap-3 cursor-pointer border border-purple-600 shadow-inner shadow-purple-500 rounded-full p-1 px-2 md:px-4 hover:bg-purple-900 hover:text-white transition-all duration-300">
+          <a href="https://github.com/nihar8262/Secure-Vault" target="_blank" className="flex items-center md:gap-3 cursor-pointer border border-purple-600 shadow-inner shadow-purple-500 rounded-full p-1 px-2 md:px-4 hover:bg-purple-900 hover:text-white transition-all duration-300">
             <lord-icon
               src="https://cdn.lordicon.com/acgiczyg.json"
               trigger="hover"
@@ -20,7 +20,7 @@ const Navbar = () => {
               style={{ width: "40px", height: "40px" }}
             ></lord-icon>
             <p>Github</p>
-          </button>
+          </a>
         </li>
       </ul>
     </nav>

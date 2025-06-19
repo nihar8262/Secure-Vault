@@ -95,7 +95,7 @@ const Manager = () => {
         transition="Bounce"
       />
       <div className="box spinning-bg">
-       <div className="container relative mx-auto mt-20 mb-16 inset-shadow-sm rounded-2xl inset-shadow-purple-500 shadow shadow-purple-600  backdrop-blur-lg w-[98vw] md:max-w-5xl min-h-[78vh] ">
+       <div className="container relative mx-auto mt-10 mb-16 inset-shadow-sm rounded-2xl inset-shadow-purple-500 shadow shadow-purple-600  backdrop-blur-lg w-[98vw] md:max-w-5xl min-h-[68.5vh] 2xl:min-h-[72vh]">
         {/* <img src={image} className="bg-cover mix-blend-overlay bg-center"/> */}
         <div className="md:text-4xl text-2xl font-bold text-center pt-10 p-2 ">
           <span className="text-purple-800">&lt; </span>

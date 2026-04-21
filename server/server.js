@@ -320,7 +320,8 @@ app.post('/api/auth/register', validateBody(authRegisterSchema), async (req, res
 
     res.status(201)
     return sendSessionResponse(db, res, user)
-  } catch {
+  } catch (error) {
+    logServerError('auth/register', error)
     return res.status(500).json({ error: 'Unable to create the account' })
   }
 })
@@ -343,7 +344,8 @@ app.post('/api/auth/login', validateBody(authLoginSchema), async (req, res) => {
     }
 
     return sendSessionResponse(db, res, user)
-  } catch {
+  } catch (error) {
+    logServerError('auth/login', error)
     return res.status(500).json({ error: 'Unable to sign in' })
   }
 })
@@ -376,7 +378,8 @@ app.post('/api/auth/refresh', async (req, res) => {
     }
 
     return sendSessionResponse(db, res, user)
-  } catch {
+  } catch (error) {
+    logServerError('auth/refresh', error)
     clearRefreshCookie(res)
     return res.status(500).json({ error: 'Unable to refresh the session' })
   }

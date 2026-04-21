@@ -30,4 +30,13 @@ export default [
       ],
     },
   },
+  {
+    files: ['backend/**/*.js', 'api/**/*.js'],
+    languageOptions: {
+      globals: globals.node,
+      parserOptions: {
+        sourceType: 'commonjs',
+      },
+    },
+  },
 ]

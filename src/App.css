@@ -1,2 +1,42 @@
-@import "tailwindcss";
+.app-shell {
+	min-height: 100vh;
+}
+
+.panel-surface {
+	border: 1px solid rgba(148, 163, 184, 0.18);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
+	box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+	backdrop-filter: blur(18px);
+}
+
+.field-shell {
+	border: 1px solid rgba(148, 163, 184, 0.28);
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.field-shell:focus-within {
+	border-color: rgba(14, 165, 233, 0.7);
+	box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12);
+}
+
+.vault-gradient {
+	background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(12, 74, 110, 0.86) 58%, rgba(251, 191, 36, 0.82));
+}
+
+.stagger-in {
+	animation: fade-up 0.45s ease both;
+}
+
+@keyframes fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 

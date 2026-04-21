@@ -1,21 +1,10 @@
-import React from 'react'
-
 const Footer = () => {
   return (
-    <div>
-        <footer className="bg-black text-white text-center p-4 mt-10  relative">
-            <p className="text-sm">
-            &copy; {new Date().getFullYear()} Secure Vault. All rights reserved.
-            </p>
-            <p className="text-xs mt-2">
-            Made with ❤️ by{" "}
-            <a href="https://nihar-chandra-sharma.vercel.app/" target="_blank"  className="hover:underline ">
-            <span className="text-purple-500"> Nihar Chandra Sharma </span>
-            </a>
-            </p>
-        </footer>
-    </div>
-  )
-}
+    <footer className="border-t border-slate-900/10 bg-white/80 px-4 py-5 text-center text-sm text-slate-500 backdrop-blur sm:px-6 lg:px-8">
+      <p>Secure Vault keeps passwords encrypted before they leave the browser.</p>
+      <p className="mt-1">Built for practical security, fast access, and clean organization.</p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

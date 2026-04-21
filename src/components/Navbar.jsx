@@ -1,29 +1,33 @@
-import React from "react";
-
-const Navbar = () => {
+const Navbar = ({ user, onLogout }) => {
   return (
-    <nav className="bg-black text-white  flex justify-around items-center p-4 shadow-md h-16">
-      <div className="logo font-bold md:text-2xl">
-        <span className="text-purple-900">&lt; </span>
-        Secure
-        <span className="text-purple-900"> Vault </span>
-        <span className="text-purple-900"> / &gt; </span>
-      </div>
-      <ul>
-        <li className="flex gap-6 ">
-          <a href="https://github.com/nihar8262/Secure-Vault" target="_blank" className="flex items-center md:gap-3 cursor-pointer border border-purple-600 shadow-inner shadow-purple-500 rounded-full p-1 px-2 md:px-4 hover:bg-purple-900 hover:text-white transition-all duration-300">
-            <lord-icon
-              src="https://cdn.lordicon.com/acgiczyg.json"
-              trigger="hover"
-              stroke="bold"
-              colors="primary:#ffffff,secondary:#cb5eee"
-              style={{ width: "40px", height: "40px" }}
-            ></lord-icon>
-            <p>Github</p>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <header className="sticky top-0 z-20 border-b border-slate-900/10 bg-white/75 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <div>
+          <p className="font-['Sora'] text-xl font-semibold tracking-tight text-slate-950 sm:text-2xl">
+            Secure Vault
+          </p>
+          <p className="text-xs uppercase tracking-[0.28em] text-slate-500">
+            Encrypted password workspace
+          </p>
+        </div>
+        <div className="flex items-center gap-3">
+          {user && (
+            <div className="hidden rounded-2xl border border-slate-200 bg-white/90 px-4 py-2 text-right shadow-sm sm:block">
+              <p className="text-sm font-semibold text-slate-900">{user.name}</p>
+              <p className="text-xs text-slate-500">{user.email}</p>
+            </div>
+          )}
+          {user && (
+            <button
+              onClick={onLogout}
+              className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-slate-950"
+            >
+              Logout
+            </button>
+          )}
+        </div>
+      </nav>
+    </header>
   );
 };
 

@@ -1,1 +1,1 @@
-module.exports = require("../backend/server");
+module.exports = require("../server/server");
